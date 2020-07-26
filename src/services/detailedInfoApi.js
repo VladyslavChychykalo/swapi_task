@@ -1,4 +1,4 @@
-const baseUrl = 'https://swapi.dev/api/planets/';
+// const baseUrl = 'https://swapi.dev/api/planets/';
 
 // export default {
 //   fetchDetailed(id, url) {
@@ -14,7 +14,7 @@ const baseUrl = 'https://swapi.dev/api/planets/';
 
 const planetDetailedObj = {
   fetchDetailed(id) {
-    return fetch(baseUrl + id, {
+    return fetch('https://swapi.dev/api/planets/' + id, {
       headers: {
         Accept: 'application/json',
       },
