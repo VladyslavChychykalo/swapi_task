@@ -1,8 +1,8 @@
-const baseUrl = 'https://swapi.dev/api/';
+// const baseUrl = 'https://swapi.dev/api/';
 
 export default {
   fetchDetailed(id, url) {
-    return fetch(baseUrl + url + id, {
+    return fetch('https://swapi.dev/api/' + url + id, {
       headers: {
         Accept: 'application/json',
       },
