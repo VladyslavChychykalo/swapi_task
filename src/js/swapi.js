@@ -2,8 +2,7 @@ import * as swapiApi from '../services/allInfoApi';
 import * as renderInfo from './render';
 import * as templateAllInfo from '../templates/templateAllinfo';
 import * as templateDetailedInfo from '../templates/templateDetailedInfo';
-// import fetchDetailedInfo from '../services/detailedInfoApi';
-import * as fetchDetailedInfo from '../services/detailedInfoApi';
+import fetchDetailedInfo from '../services/detailedInfoApi';
 import refs from './refs';
 import debounce from 'lodash.debounce';
 import errorNoteficationTemplate from '../templates/templateError';
@@ -49,8 +48,8 @@ function takePlanetInfo({ target }) {
     return;
   }
 
-  fetchDetailedInfo.planetDetailedObj
-    .fetchDetailed(target.id)
+  fetchDetailedInfo
+    .fetchDetailed(target.id, 'planets/')
     .then(data => {
       renderInfo.renderDetailedInfo(
         refs.planetInfoBlock,
@@ -61,19 +60,6 @@ function takePlanetInfo({ target }) {
     .catch(err => {
       console.log(err);
     });
-
-  // fetchDetailedInfo
-  //   .fetchDetailed(target.id, 'planets/')
-  //   .then(data => {
-  //     renderInfo.renderDetailedInfo(
-  //       refs.planetInfoBlock,
-  //       data,
-  //       templateDetailedInfo.planetInfo,
-  //     );
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //   });
 }
 
 // ========================================== Films ================================
