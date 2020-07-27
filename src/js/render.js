@@ -1,5 +1,9 @@
 function renderAllInfo(article, items, template) {
-  const markup = items
+  const sortedItems = items.sort((a, b) =>
+    a.name > b.name || a.title > b.title ? 1 : -1,
+  );
+
+  const markup = sortedItems
     .map(item => {
       const index = /\d+/.exec(item.url);
       return template(item, index[0]);
