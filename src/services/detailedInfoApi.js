@@ -14,7 +14,7 @@
 
 const planetDetailedObj = {
   fetchDetailed(id = '') {
-    return fetch(`https://swapi.dev/api/planets/${id}`, {
+    return fetch(`https://swapi.dev/api/planets/${id}/.json`, {
       headers: {
         Accept: 'application/json',
       },
