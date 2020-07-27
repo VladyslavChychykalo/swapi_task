@@ -35,8 +35,12 @@ body {
 }
 
 .allList p {
-  width: 70px;
-  margin-right: 20px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.allList li button {
+  width: 150px;
 }
 
 .allList li button {
@@ -49,6 +53,6 @@ body {
 }
 
 .detailedInfo {
-  display: flex;
-  justify-content: center;
+  width: 400px;
+  margin-left: 300px;
 }
